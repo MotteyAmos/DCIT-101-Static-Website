@@ -1,0 +1,408 @@
+@font-face {
+    font-family: "Anton";
+    src: url("./css\ fonts/Anton/Anton-Regular.ttf");
+}
+@font-face {
+    font-family: "Great_Vibes";
+    src: url("./css\ fonts//GreatVibes-Regular.ttf");
+}
+@font-face {
+    font-family:"Roboto" ;
+    src: url("./css\ fonts/Roboto-Regular.ttf");
+}
+
+/* general selectors */
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+/* the header section styles */
+header{
+    width: 100%;
+    height: 5rem;
+    background-color: #000000;
+    opacity: 0.9;
+    position:fixed;
+}
+header #container{
+    width:90%;
+
+    display:flex;
+    justify-content: space-between;
+    height:inherit;
+    align-items: center;
+    position: absolute;
+    left:2rem;
+}
+
+header .logo{
+    color:rgb(14, 13, 13);
+    font-family: Anton;
+    letter-spacing:0.5rem;
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke-width:1px;
+    background: linear-gradient(to bottom right, #fcfdfc, #c1863d);
+    -webkit-background-clip: text;
+    background-position:0 0;
+    animation:name 50s linear infinite;
+    border:2px solid white; 
+}
+@keyframes name{
+    100%{
+        background-position:2000px 0;
+    }
+}
+.logo .code{
+    color:rgb(27, 28, 27);
+    font-size: 3.5rem;
+    font-family: fantasy;
+}
+.logo .love{
+    font-size:1.5rem;
+    letter-spacing: 0.1rem;
+    font-family:Great_Vibes;
+    font-style: italic;
+    -webkit-text-fill-colour:transparent;
+    -webkit-text-stroke-width:1px;
+    color:transparent;
+}
+header li{
+    display: inline-block;
+    margin:1em;
+
+    
+}
+header a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+}
+
+header a::after{
+    content:" ";
+    position: absolute;
+    bottom: -5px;
+    width:0%;
+    height:0.1em;
+    left:50%;
+    transform:translatex(-50%); 
+    background-color: rgb(255, 250, 250);
+    transition: all 0.5s ease-in-out;
+}
+header a:hover::after{
+    width:100%;
+    color:rgb(249, 248, 248);
+}
+header a:hover{
+    color:#e2a760;
+}
+header a:active{
+    color:#ffff;
+}
+/*--------#--End header section----*/
+/*------body first secton ---------*/
+
+.section1{
+    background-image:linear-gradient(rgba(2,3,4,0.7),rgba(83, 98, 113, 0.7)), url(../images/image1.jpg);
+    background-size:cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat; 
+
+}
+
+.section1Main{ 
+    position: absolute;
+    width:70%;
+    height: 70vh;
+    top:22vh;
+    right:50%;
+    transform: translatex(50%);    
+    
+}
+
+
+.section1 .info{
+    height: inherit;
+    width: 100%;
+}
+.section1 .info h1{
+    position: absolute;
+    top:30%;
+    text-align: center;
+    width:100%;
+    font-family: sans-serif;
+    font-size:4.5em;
+    color:rgb(255, 255, 255);
+    z-index: 100;
+}
+.section1 .info h3{
+    position:absolute;
+    top:49%;
+    width:100%;
+    text-align: center;
+    font-size: 1.3em;
+    color:rgb(255, 253, 253);
+}
+.section1 .info .buttons{
+    position: absolute;
+    top:57%;
+    width:inherit;
+    text-align: center;
+}
+.section1 .buttons button{
+    padding:1em;
+    border-radius: 2rem;
+    cursor: pointer;
+    position: relative;
+    color:white;
+    background-color: transparent;
+    overflow:hidden;
+    font-weight: bold;
+    font-size: 1rem;
+    border:2px solid white;
+    width:13rem;
+}
+.section1 .buttons button::after{
+    content:" ";
+    position: absolute;
+    left:0px;
+    top:0px;
+    width:0%;
+    height: 100%;
+    background-color: #e2a760;
+    border-radius:2rem;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+    
+}
+.section1 .buttons button:hover::after{
+    width:100%;
+    
+}
+.section1 .button1 a{
+ text-decoration: none;
+ color:white;
+}
+.section1 .button1 a:active{
+    color:red;
+}
+/*-----#----End of section1 first body content-----#----*/
+
+/*------- The begin of section2 ------------*/
+
+.section2{
+    display:flex;
+    width: 100%;
+    background:rgba(0, 0, 0, 0.3);
+    height: 80vh;
+    margin: 5rem auto;
+    box-shadow:0 0 25px rgb(87, 86, 86);
+    border-radius:25px;
+   
+  
+}
+.section2 .aboutMeImage{
+    width:50%;
+    position: relative;
+}
+.section2 .aboutMeImage img{
+    width:90%;
+    height: 30vw;
+    position:absolute;
+    transform: translate(50%);
+    right: 50%;
+    top:3rem;
+    border-radius: 25px 25px 25px 25px;
+    z-index: -1;
+    box-shadow: 0px 0px 55px 25px rgba(232, 236, 240, 0.7);
+}
+
+.section2 .aboutMeInfo{ 
+    width:50%;
+    height: inherit;
+}
+.section2 .aboutMeInfo div{
+    width:90%;
+    height:90%;
+    font-family:Roboto;
+    line-height: 2rem;
+    font-size: 1.8rem;
+    font-weight: 1.3rem;
+    margin:5rem auto;
+    text-align: justify;
+    color:rgb(20, 19, 19);
+}
+.section2 .aboutMeInfo div a{
+    text-decoration: none;
+    font-style: italic;
+    font-size:1.5rem;
+}
+
+
+/*---------#---The End of section2 --------#------*/
+ 
+/*-----------The begin of section3 -----------*/
+.section3{
+    width:90vw;
+    height: 100vh;
+    margin:1rem auto;
+    
+}
+.serviceHeading{
+    font-family: Anton;
+    font-size: 2em;
+    word-spacing: 3rem;
+}
+.section3 .images{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap:1rem;
+    grid-row-gap:1rem;
+    width:100%;
+    height: 40vh;
+}
+.section3 .images div{
+    width:inherit;
+    height: inherit;
+}
+.section3 img{
+
+    width:100%;
+    min-width: 100%;
+    height: inherit;
+    max-width: fit-content;
+    max-height: fit-content;
+    transition:all 0.5s ease-in-out;
+    cursor:pointer;
+    border-radius: 25px;
+}
+
+.section3 img:hover{
+    box-shadow: 0 0 25px #e2a760;
+    border-radius: 0px;
+}
+.section3 .serviceHeading{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    max-height: fit-content;
+}
+/*----------#-----The end of section3---------#-----*/
+
+/*---------the begin of section4----------*/
+.section4{
+    background-image:linear-gradient(rgba(2,3,4,0.7),rgba(83, 98, 113, 0.7)), url(../images/image13.jpg);
+    background-position: center;
+    background-size:cover;
+    height: 40rem;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    color:white;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    height: inherit;
+    margin:0rem auto;
+}
+.form div{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    padding: 0.8rem;
+}
+.form div input[type=text], input[type=date], input[type=email]{
+    width:15rem;
+    height: 2.5em;
+    border:2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline:none;
+    padding:8px;
+    
+}
+
+.form div input[type=text]:focus, input[type=date]:focus, input[type=email]:focus{
+    border-color: #e2a760;
+    box-shadow: 0 0 8px #e2a760;
+}
+.form div input[type=submit]{
+    width:10rem;
+    height: 2em;
+}
+
+.form div textarea{
+    outline:none;
+    border:2px solid #aaa;
+    
+}
+.form div textarea:focus{
+    border-color: #e2a760;
+    box-shadow: 0 0 8px #e2a760;
+}
+
+.form div input[type=submit]{
+    color:white;
+    height: 2.5em;
+    border:2px #e2a760 solid;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size:1.1rem;
+}
+.form div input[type=submit]:hover{
+    background-color: #e2a760;
+    cursor: pointer;
+}
+/*---------#the section4------#--------*/
+/*----#------End of body section---#-----*/
+
+/*----------------The begin of the footer--------*/
+footer{
+    position:relative;
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0,0.7);
+    text-align: center;
+    height: 15rem;
+    color: #ffff;
+}
+footer .footerContent{
+   margin-top: rem;
+   border:2px solid  ;
+
+}
+.footerContent .header{
+    margin-top: 3rem;
+    font-size:2.5rem;
+}
+footer ul li {
+    font-size: 1.5rem;
+   margin:0px 2rem;
+    display:inline-block;
+}
+footer .lastword{
+    font-size: 1rem;
+    margin:1rem 0rem;
+}
+
+.triangle-down {
+    position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 1rem solid transparent;
+	border-right: 1rem solid transparent;
+	border-top: 2rem solid rgb(255, 255, 255);
+    transform: translate(50%);
+    right: 50%;
+    
+}
+/*---------#The End of the footer----#-----*/
+
